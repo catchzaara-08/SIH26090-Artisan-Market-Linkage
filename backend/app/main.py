@@ -8,6 +8,7 @@ from app.api.routes.provenance import router as provenance_router
 from app.api.routes.qr import router as qr_router
 from app.api.routes.auth import router as auth_router
 from app.api.routes.image import router as image_router
+from app.api.routes.payment import router as payment_router
 
 from app.database.database import Base, engine
 
@@ -15,6 +16,7 @@ from app.models.product import ProductTable
 from app.models.artisan import ArtisanTable
 from app.models.gi import GITable
 from app.models.provenance import ProvenanceEventTable
+from app.models.payment import PaymentTable
 
 
 Base.metadata.create_all(bind=engine)
@@ -34,6 +36,7 @@ app.include_router(provenance_router)
 app.include_router(qr_router)
 app.include_router(auth_router)
 app.include_router(image_router)
+app.include_router(payment_router)
 
 
 app.mount(
