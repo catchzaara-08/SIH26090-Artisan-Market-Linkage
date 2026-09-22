@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
 
 from app.api.routes.product import router as product_router
 from app.api.routes.artisan import router as artisan_router
@@ -6,6 +7,7 @@ from app.api.routes.gi import router as gi_router
 from app.api.routes.provenance import router as provenance_router
 from app.api.routes.qr import router as qr_router
 from app.api.routes.auth import router as auth_router
+from app.api.routes.image import router as image_router
 
 from app.database.database import Base, engine
 
@@ -31,6 +33,14 @@ app.include_router(gi_router)
 app.include_router(provenance_router)
 app.include_router(qr_router)
 app.include_router(auth_router)
+app.include_router(image_router)
+
+
+app.mount(
+    "/processed-images",
+    StaticFiles(directory="processed_images"),
+    name="processed-images"
+)
 
 
 @app.get("/")
