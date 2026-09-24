@@ -1,8 +1,7 @@
-from io import BytesIO
 from pathlib import Path
+from io import BytesIO
 
 from PIL import Image, ImageEnhance, ImageOps
-from rembg import remove
 
 
 OUTPUT_DIR = Path("processed_images")
@@ -13,59 +12,54 @@ def enhance_product_image(
     image_bytes: bytes,
     output_filename: str
 ) -> str:
+    """
+    Lightweight marketplace image enhancement.
 
-    # 1. Remove the background using AI
-    removed_background = remove(image_bytes)
+    This version uses Pillow only, so it works locally without
+    downloading an AI background-removal model.
+    """
 
-    # 2. Convert result to an RGBA image
-    foreground = Image.open(
-        BytesIO(removed_background)
-    ).convert("RGBA")
+    try:
+        # Open uploaded image
+        image = Image.open(BytesIO(image_bytes)).convert("RGB")
 
-    # 3. Create a clean white professional background
-    background = Image.new(
-        "RGBA",
-        foreground.size,
-        (255, 255, 255, 255)
-    )
+        # Automatically correct image orientation
+        image = ImageOps.exif_transpose(image)
 
-    # 4. Place the actual artisan product on the background
-    professional_image = Image.alpha_composite(
-        background,
-        foreground
-    )
+        # Improve contrast
+        image = ImageOps.autocontrast(image)
 
-    # 5. Convert to RGB for marketplace-friendly JPEG output
-    professional_image = professional_image.convert("RGB")
+        # Slight brightness improvement
+        image = ImageEnhance.Brightness(image).enhance(1.08)
 
-    # 6. Automatically improve contrast
-    professional_image = ImageOps.autocontrast(
-        professional_image
-    )
+        # Slight colour improvement
+        image = ImageEnhance.Color(image).enhance(1.08)
 
-    # 7. Improve brightness
-    professional_image = ImageEnhance.Brightness(
-        professional_image
-    ).enhance(1.05)
+        # Improve sharpness
+        image = ImageEnhance.Sharpness(image).enhance(1.20)
 
-    # 8. Improve colour
-    professional_image = ImageEnhance.Color(
-        professional_image
-    ).enhance(1.05)
+        # Resize very large images while preserving aspect ratio
+        max_dimension = 1600
 
-    # 9. Improve sharpness
-    professional_image = ImageEnhance.Sharpness(
-        professional_image
-    ).enhance(1.20)
+        if max(image.size) > max_dimension:
+            image.thumbnail(
+                (max_dimension, max_dimension),
+                Image.Resampling.LANCZOS
+            )
 
-    # 10. Save the professional image
-    output_path = OUTPUT_DIR / output_filename
+        # Save marketplace-ready image
+        output_path = OUTPUT_DIR / output_filename
 
-    professional_image.save(
-        output_path,
-        format="JPEG",
-        quality=95,
-        optimize=True
-    )
+        image.save(
+            output_path,
+            format="JPEG",
+            quality=95,
+            optimize=True
+        )
 
-    return str(output_path)
+        return str(output_path)
+
+    except Exception as exc:
+        raise RuntimeError(
+            f"Image enhancement failed: {exc}"
+        )
