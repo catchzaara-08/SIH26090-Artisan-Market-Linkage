@@ -37,12 +37,12 @@ def generate_qr(product_id: str):
             "http://127.0.0.1:8000"
         )
 
-        neelam_url = (
-            f"{public_base_url}/neelam/"
-            f"{product_id}/authenticate"
+        public_page_url = os.getenv(
+            "PUBLIC_PRODUCT_PAGE_URL",
+            f"{public_base_url}/public/neelam"
         )
 
-        qr = qrcode.make(neelam_url)
+        qr = qrcode.make(public_page_url)
 
         image_bytes = BytesIO()
         qr.save(image_bytes, format="PNG")

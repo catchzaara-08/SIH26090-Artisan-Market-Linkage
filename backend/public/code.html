@@ -1,0 +1,935 @@
+<!DOCTYPE html><html lang="en" style=""><svg class="inline-defs-container" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"></svg><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="web_standard" name="shell-type">
+<title>neelam · Handloom Provenance &amp; Artisan Origin</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<!-- Neelam Design Board Typography: Domine, Newsreader & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&amp;family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #FEF9EE;
+        color: #1A2942;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+      body { overscroll-behavior: none; }
+    }
+    ::-webkit-scrollbar { display: none; }
+    .font-serif-brand { font-family: 'Domine', 'Newsreader', Georgia, serif; }
+    .font-serif-quote { font-family: 'Newsreader', 'Domine', serif; }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "canvas-base": "#FEF9EE",
+            "silk-cream": "#F8F3E8",
+            "night-slate": "#1A2942",
+            "indigo-blue": "#364C7B",
+            "indigo-dark": "#28395D",
+            "deep-teal": "#244C5A",
+            "zari-madder": "#781E2B",
+            "weave-green": "#15803D",
+            "zari-ochre": "#D97706",
+            "card-border": "#E2D9C8",
+            "muted-sand": "#DEDACF",
+            "sand-light": "#F2ECE0"
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            serif: ['Domine', 'Newsreader', 'serif'],
+            quote: ['Newsreader', 'Domine', 'serif']
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-canvas-base text-night-slate antialiased selection:bg-indigo-blue/15 selection:text-indigo-blue">
+<!-- TOP HEADER / BRAND NAVIGATION -->
+<header class="fixed top-0 w-full z-50 bg-[#FEF9EE]/90 backdrop-blur-md border-b border-card-border/80">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-8">
+<div class="h-20 flex items-center justify-between gap-4">
+<!-- Neelam Brand Lockup (Kolam Motif + neelam wordmark) -->
+<a class="flex items-center gap-3.5 group" href="#">
+<div class="w-10 h-10 rounded-lg bg-silk-cream border border-card-border flex items-center justify-center p-1.5 shadow-sm group-hover:border-indigo-blue transition-colors">
+<img alt="Neelam Kolam Weave Motif" class="w-full h-full object-contain mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNCPdLA-E3lrOgEPASBCZefo6FhFpSTmTaBnwbF3lgoYEXSnUKvam9hzKpG4i85hiubegjQyy3PrqbVH8VzzlVCzTjYqngEdxNfVyA92-0Gj2w87zWHM7O6hSO76DOuAF0HWDMD8kw8hAKCq5YkDC3DrNjyHv4QwRerqbXpkJjFt_gSCFKpo2cIpO8a2kyPxOp-mLDqAsILhTwaqxByAnloJc0gYeq0wTENQLbUClgemoEyz1A4D6kIpwZD8YwRi-UhWY">
+</div>
+<div class="flex flex-col">
+<div class="h-6 flex items-center">
+<img alt="neelam" class="h-6 w-auto object-contain mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU61lBjHO6aBm2zvqjb8FK6IOxbVpanHym8X_q6LLQmbKjXicLfZw0j3VxwFelX20Lse7Vg9QEW4EBtbGQZzaEhFFUwxrq7ru9nanlwuRPNQ63hVI7u0loFabgvISoMyGQP0bQ_NLM44pmdB49O7iuPfWTyZG-Nk2WbFp9ANUCYiEojV23OxDE_66dw_VE94y18U_aYXW0F39qMk1mnO5RWkClBlfRJzFzwJUDR63ZFdmvLJjF82g6YYoQZpnthJhDxOs">
+</div>
+<span class="text-[10px] uppercase font-bold tracking-[0.18em] text-deep-teal mt-0.5">Authentic Handloom Provenance</span>
+</div>
+</a>
+<!-- Middle Verified Pill -->
+<div class="hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-full bg-silk-cream border border-card-border">
+<span class="w-2 h-2 rounded-full bg-weave-green animate-pulse"></span>
+<span class="text-xs font-semibold text-night-slate tracking-tight">Verified GI Origin · Society #184 Negamam</span>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden lg:flex items-center gap-1.5">
+<a class="px-3.5 py-1.5 rounded-md text-xs font-bold uppercase tracking-wider text-indigo-blue bg-indigo-blue/10" href="#product-overview">Provenance</a>
+<a class="px-3.5 py-1.5 rounded-md text-xs font-semibold uppercase tracking-wider text-night-slate/75 hover:text-night-slate hover:bg-silk-cream transition-colors" href="#provenance-map">Loom Map</a>
+<a class="px-3.5 py-1.5 rounded-md text-xs font-semibold uppercase tracking-wider text-night-slate/75 hover:text-night-slate hover:bg-silk-cream transition-colors" href="#artisan-section">Master Artisan</a>
+<a class="px-3.5 py-1.5 rounded-md text-xs font-semibold uppercase tracking-wider text-night-slate/75 hover:text-night-slate hover:bg-silk-cream transition-colors" href="#other-creations">Artisan Catalog</a>
+<a class="px-3.5 py-1.5 rounded-md text-xs font-semibold uppercase tracking-wider text-night-slate/75 hover:text-night-slate hover:bg-silk-cream transition-colors" href="#loom-video-section">Loom Video</a>
+</nav>
+<!-- Right Quick Actions -->
+<div class="flex items-center gap-2.5">
+<button class="hidden sm:inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-lg bg-silk-cream border border-card-border text-night-slate text-xs font-bold tracking-wide uppercase hover:bg-sand-light transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-zari-madder">verified</span>
+            GI Ledger #GI-482
+          </button>
+<button class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-indigo-blue text-white text-xs font-bold tracking-wider uppercase hover:bg-indigo-dark transition-all shadow-sm" type="button">
+<span class="">Direct from Weaver</span>
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- MAIN PROVENANCE CONTENT -->
+<main class="w-full pt-24 bg-canvas-base pb-16">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-8 pt-4">
+<!-- 1. TRANSPARENT VERIFICATION & CONSCIOUS IMPACT BANNER -->
+<section class="w-full mb-8">
+<div class="bg-silk-cream border border-card-border rounded-xl p-5 sm:p-6 shadow-sm relative overflow-hidden">
+<div class="absolute right-0 top-0 w-48 h-48 opacity-[0.04] pointer-events-none transform translate-x-12 -translate-y-8">
+<img alt="" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1sJHGfxIuFmqDQaUjyAYAoiXrcmrz-vYhg7DUuMg2vzYlyS2UTDDEsP3K9GEcJdy9HhezyCkFZXsO7Yu5Vj7ahu1RdVmWygXlIvUd35ICHVR5x6sTecci5wKGSsSKyU1NjNeP_B92J16FnrjHv5THZ0PvLT4mYnO_rGiS0x-3lsNoYzF8Vkk5EHcVi_OlYbCPlejBCG8FRoxfzkwhJERpcAWFIBhTEOspsrZGmeOxiL-7PTrCqD85W42ThNVgetTxafI">
+</div>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-5 relative z-10">
+<div class="flex items-start sm:items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-indigo-blue/10 border border-indigo-blue/20 flex items-center justify-center shrink-0 text-indigo-blue">
+<span class="material-symbols-outlined text-2xl">verified_user</span>
+</div>
+<div class="space-y-1">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-weave-green/10 text-weave-green border border-weave-green/30 text-[11px] font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-weave-green"></span> 100% Authentic Handloom Verified
+                  </span>
+<span class="text-[11px] uppercase font-bold tracking-wider text-zari-madder">
+                    GI Registered: GI-482 · Pollachi Taluk
+                  </span>
+</div>
+<h1 class="font-serif text-2xl sm:text-3xl text-night-slate font-bold tracking-tight">
+                  Genuine Negamam Cotton Handloom Saree <span class="font-sans font-medium text-lg text-night-slate/60">#NGM1024</span>
+</h1>
+</div>
+</div>
+<!-- Straight to the Point Fair Compensation Summary -->
+<div class="flex flex-wrap items-center gap-3">
+<div class="px-3.5 py-2 rounded-lg bg-canvas-base border border-card-border text-left">
+<span class="block text-[11px] uppercase font-bold text-night-slate/60 tracking-wider">Loom Date</span>
+<span class="block text-xs font-bold text-night-slate">14 Oct 2024</span>
+</div>
+<div class="px-3.5 py-2 rounded-lg bg-canvas-base border border-card-border text-left">
+<span class="block text-[11px] uppercase font-bold text-night-slate/60 tracking-wider">Master Weaver</span>
+<a class="block text-xs font-bold text-indigo-blue hover:underline" href="#artisan-section">Murthy S. (Society #184)</a>
+</div>
+<div class="px-3.5 py-2 rounded-lg bg-weave-green/10 border border-weave-green/30 text-weave-green text-left">
+<span class="block text-[11px] uppercase font-bold tracking-wider">Ethical Direct Remittance</span>
+<span class="block text-xs font-bold">85% to Weaver Account</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. PRODUCT SHOWCASE & CONSCIOUS IMPACT BREAKDOWN -->
+<section class="w-full mb-12" id="product-overview">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left 7 cols: Authentic High-Resolution Visuals -->
+<div class="lg:col-span-7 flex flex-col gap-4">
+<!-- Main Saree Showcase -->
+<div class="group relative rounded-xl overflow-hidden bg-silk-cream border border-card-border shadow-sm">
+<div class="aspect-[4/3] w-full relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" data-alt="Authentic Negamam cotton saree folded neatly showing deep aubergine body and rich copper rust border." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBy2vQfnkdcOPTVY227k2_h3sUfpoEE_4Pbdc73cd9w3pCK_u8B98i0R0BYhptYfvOopfZnEhOEN0yBg0XN-C2f8J7byiG1QxH7x2LFLkv5fdljDkKd9IYjUsE09Q1y8CtisU2NgvvLR_e024ph9FijeV0DJE-yJiHnjIIAHb8W9BDGHf2mksjy6TofbVuApacngHTkpKBmGIacPNMUbZfvDEmXDnvqeqTnCsn_I-zfxKpK4tOMaEbhFA">
+<!-- Floating Authentic Tag & Kolam Stamp -->
+<div class="absolute top-4 left-4 flex flex-col gap-1.5 pointer-events-none">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-night-slate/90 backdrop-blur-md text-white text-[11px] font-bold uppercase tracking-wider">
+<img alt="" class="w-3 h-3 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrcD4rJWqc0TbxOarqMmmPQ53HQ6PY-Cia-6rzCprOTw56ZqURqOuElXr81th1rbHrj44vmeicjSDFO0e8ZIEnsjfgkTg9nsii_o--FYuZ7x2JLbnaDNUIpXFTn9ImC26V7eTtrzOW9gE7fklKE80zMBl6tzXD3CpLKpDvAhT7avx6PmYEmdaJh2HOv4qNG1ZGfrE9M5xbWUbPS6BUK2f8W6fB1M402FIsOCxN85wmyQeinh8e54DuYeQLZdowkYPjNF4">
+                    GI Certified Single-Weft Piece
+                  </span>
+<span class="px-2.5 py-0.5 rounded bg-silk-cream/95 backdrop-blur-md text-night-slate border border-card-border text-[11px] font-medium">
+                    80s × 80s High-Twist Combed Cotton
+                  </span>
+</div>
+<div class="absolute bottom-4 right-4 flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-md bg-canvas-base/90 backdrop-blur-sm text-night-slate text-xs font-semibold border border-card-border flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-zari-ochre">lock</span>
+                    Provenance ID Verified
+                  </span>
+</div>
+</div>
+</div>
+<!-- Macro Details (Tactile weave proof) -->
+<div class="grid grid-cols-3 gap-3 sm:gap-4">
+<div class="rounded-lg overflow-hidden bg-silk-cream border border-card-border p-2 flex flex-col gap-1.5 shadow-sm">
+<div class="aspect-square w-full rounded overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Macro close-up texture of 80s combed cotton warp" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNWKCGWnFilgo5JKcK3-bVM-piEbBpNym7IpKiWuEJYywVIy8m6NSseImXbLsg5ACfJ69yPLbuJk2bTTiLNG__LQZM90sD-NvxEq7jrpozFSbxDHYxXKXxwueX4nfXV9MI_RHxU8QmzZycpc51Kxv6j-QvDjPwRq_MHHk3RYxFRXx8pDRYuWb826peFRwUkDfF3LO5j_hNgrHJvwx9wM-0NsZQzxc6N6E-EXD5RrLdNLpb7PKDpIp8Fw">
+</div>
+<span class="text-[11px] font-bold uppercase tracking-wider text-night-slate/75 text-center">80s Combed Warp</span>
+</div>
+<div class="rounded-lg overflow-hidden bg-silk-cream border border-card-border p-2 flex flex-col gap-1.5 shadow-sm">
+<div class="aspect-square w-full rounded overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Macro photograph of copper zari border detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFDOk9aPy5SE1YtfR5pX-Hd3SWrlvTOO1YA5mper986V6vmax3o0CuvANJeqzJOWOcHGUcgmR_wNAqM0SJFm8LqgR7hy_96-CTJIR77R27DUV0P1ggkOrgFyYJAdxAki-ANHGC8SCYJNk6FyNXezBYRULKCDqXT45RdnWa2z6EMkf78IzV1qFtB2EEggee7B3ui2rX-FJ_fYxCqRpHKz4d33jgQhuEw2FReQHyc5jYGY6TBh820GQiNQ">
+</div>
+<span class="text-[11px] font-bold uppercase tracking-wider text-night-slate/75 text-center">Copper Zari Border</span>
+</div>
+<div class="rounded-lg overflow-hidden bg-silk-cream border border-card-border p-2 flex flex-col gap-1.5 shadow-sm">
+<div class="aspect-square w-full rounded overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Hands gently unfolding authentic handloom cotton saree" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXAVaRCXKbVNDKWdXjW6CRtl5r7H5vdoRZSwocOiB24Wy9udg5AtZQomSpHRfdUk8C7BxrUB1G9sTztIU452lAVIBl1ubVMuRLR0fEf6NTcWqTD-ad73f7yeVyNsSwHepolhoXAwSIodKJOapJrCPAsvv4agAB-BXVhTS4slxkr8RSVXASJ787Kw21A37rn6tR3QCUoCw66XNgywGNL2ZFVf7QYPjM8Wgf4LjQILRnPhAGYK2Em9udRg">
+</div>
+<span class="text-[11px] font-bold uppercase tracking-wider text-night-slate/75 text-center">Breathable Drape</span>
+</div>
+</div>
+<!-- Conscious Sustainability Metrics -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
+<div class="p-2.5 rounded-lg bg-silk-cream border border-card-border text-center">
+<span class="material-symbols-outlined text-weave-green text-lg block mb-0.5">eco</span>
+<span class="text-[11px] font-bold text-night-slate block">100% Organic Cotton</span>
+<span class="text-[10px] text-night-slate/60">Pollachi Farm Origin</span>
+</div>
+<div class="p-2.5 rounded-lg bg-silk-cream border border-card-border text-center">
+<span class="material-symbols-outlined text-deep-teal text-lg block mb-0.5">water_drop</span>
+<span class="text-[11px] font-bold text-night-slate block">Certified Azo-Free</span>
+<span class="text-[10px] text-night-slate/60">Erode Cluster Dyeworks</span>
+</div>
+<div class="p-2.5 rounded-lg bg-silk-cream border border-card-border text-center">
+<span class="material-symbols-outlined text-zari-ochre text-lg block mb-0.5">straighten</span>
+<span class="text-[11px] font-bold text-night-slate block">6.2m × 46″ Width</span>
+<span class="text-[10px] text-night-slate/60">With Running Blouse</span>
+</div>
+<div class="p-2.5 rounded-lg bg-silk-cream border border-card-border text-center">
+<span class="material-symbols-outlined text-indigo-blue text-lg block mb-0.5">pace</span>
+<span class="text-[11px] font-bold text-night-slate block">32 Loom Hours</span>
+<span class="text-[10px] text-night-slate/60">Single Pit Loom</span>
+</div>
+</div>
+</div>
+<!-- Right 5 cols: Clear Technical Specifications & Transparent Fair Pricing -->
+<div class="lg:col-span-5 flex flex-col bg-silk-cream border border-card-border rounded-xl p-5 sm:p-6 shadow-sm">
+<div class="pb-3 border-b border-card-border/80">
+<div class="flex items-center justify-between mb-1.5">
+<span class="text-[11px] uppercase font-bold tracking-widest text-deep-teal">
+                  Society Ledger Record · Neelam Verified
+                </span>
+<span class="inline-flex items-center gap-1 text-[11px] font-bold text-weave-green">
+<span class="w-1.5 h-1.5 rounded-full bg-weave-green"></span> Physical Tag Active
+                </span>
+</div>
+<h2 class="font-serif text-2xl font-bold text-night-slate">
+                Negamam Thread-Embossed Cotton Saree
+              </h2>
+<p class="text-xs text-night-slate/70 mt-1">Item Ref: <span class="font-mono font-bold text-night-slate">#NGM1024</span> · Batch #24-10-NEELAM</p>
+</div>
+<!-- Straight-To-The-Point Fair Pricing Breakdown -->
+<div class="my-4 p-4 rounded-xl bg-canvas-base border border-card-border">
+<div class="flex items-baseline justify-between">
+<div>
+<span class="text-[11px] uppercase font-bold text-night-slate/60 tracking-wider block">Transparent Price</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-serif text-3xl font-bold text-indigo-blue">₹ 2,450</span>
+<span class="text-xs font-semibold text-night-slate/60">all taxes included</span>
+</div>
+</div>
+<div class="text-right">
+<span class="px-2.5 py-1 rounded-full bg-weave-green/15 text-weave-green border border-weave-green/30 text-xs font-bold inline-block">
+                    ₹ 2,082 directly to Murthy
+                  </span>
+<span class="block text-[10px] text-night-slate/50 mt-0.5">85% direct wage · Zero middleman cut</span>
+</div>
+</div>
+<!-- Transparent Cost Stack Bar -->
+<div class="mt-3 pt-3 border-t border-card-border/60">
+<div class="text-[11px] font-semibold text-night-slate/80 mb-1 flex justify-between">
+<span class="">Direct Weaver: 85%</span>
+<span class="">Yarn/Dye: 10%</span>
+<span class="">Co-op &amp; GI: 5%</span>
+</div>
+<div class="h-2 w-full rounded-full bg-card-border overflow-hidden flex">
+<div class="bg-indigo-blue h-full w-[85%]"></div>
+<div class="bg-deep-teal h-full w-[10%]"></div>
+<div class="bg-zari-ochre h-full w-[5%]"></div>
+</div>
+</div>
+</div>
+<!-- Technical Specification Table (High contrast & crisp) -->
+<div class="space-y-2 text-xs bg-canvas-base/60 rounded-lg p-3.5 border border-card-border mb-4">
+<div class="flex justify-between items-center py-0.5">
+<span class="text-night-slate/60 font-medium">Master Weaver</span>
+<a class="font-bold text-indigo-blue hover:underline flex items-center gap-1" href="#artisan-section">
+                  Murthy S. <span class="material-symbols-outlined text-[13px]">arrow_outward</span>
+</a>
+</div>
+<div class="flex justify-between items-center py-0.5">
+<span class="text-night-slate/60 font-medium">Weave Structure</span>
+<span class="font-semibold text-night-slate">Single Fly-Shuttle Pit Loom</span>
+</div>
+<div class="flex justify-between items-center py-0.5">
+<span class="text-night-slate/60 font-medium">Warp &amp; Weft Density</span>
+<span class="font-semibold text-night-slate">80s Combed × 80s Cotton</span>
+</div>
+<div class="flex justify-between items-center py-0.5">
+<span class="text-night-slate/60 font-medium">Body Hue</span>
+<span class="font-semibold text-night-slate flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-[#3B1D35] inline-block border border-card-border"></span>
+                  Aubergine / Deep Purple
+                </span>
+</div>
+<div class="flex justify-between items-center py-0.5">
+<span class="text-night-slate/60 font-medium">Border &amp; Zari</span>
+<span class="font-semibold text-night-slate flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-[#B45B3E] inline-block border border-card-border"></span>
+                  Copper Rust &amp; Fine Gold Zari
+                </span>
+</div>
+<div class="flex justify-between items-center py-0.5">
+<span class="text-night-slate/60 font-medium">Dimensions &amp; Weight</span>
+<span class="font-semibold text-night-slate">6.2 m × 46″ (540 grams)</span>
+</div>
+</div>
+<!-- Straight to Point Curatorial Note -->
+<div class="mb-5">
+<span class="text-[11px] uppercase font-bold tracking-wider text-deep-teal block mb-1">Neelam Provenance Synopsis</span>
+<p class="text-xs text-night-slate/80 leading-relaxed font-sans">
+                Handcrafted over four days on an underground wooden pit loom in Negamam. Breathable high-twist combed cotton pairs deep aubergine with natural copper-tone selvage, adorned by embossed floral and paisley butta work. No industrial polyester blends or mechanized shuttle looms.
+              </p>
+</div>
+<!-- Action CTAs -->
+<div class="flex flex-col sm:flex-row gap-2.5 mt-auto">
+<button class="flex-1 py-3 px-4 rounded-lg bg-indigo-blue text-white text-xs font-bold uppercase tracking-wider hover:bg-indigo-dark transition-all flex items-center justify-center gap-2 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[17px]">download</span>
+                Download GI Certificate
+              </button>
+<button class="py-3 px-4 rounded-lg bg-canvas-base border border-card-border text-night-slate text-xs font-bold uppercase tracking-wider hover:bg-sand-light transition-colors flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[17px] text-zari-madder">favorite</span>
+                Save
+              </button>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. GEOGRAPHIC TRACING & 6-STEP LOOM MILESTONES -->
+<section class="w-full mb-12" id="provenance-map">
+<div class="mb-6 text-center max-w-2xl mx-auto">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-silk-cream border border-card-border text-deep-teal text-xs font-bold uppercase tracking-wider mb-2">
+<span class="w-1.5 h-1.5 rounded-full bg-indigo-blue"></span>
+            Radical Supply Chain Transparency
+          </div>
+<h2 class="font-serif text-2xl sm:text-3xl text-night-slate font-bold">
+            Journey Map: From Tamil Nadu Soil to Your Hands
+          </h2>
+<p class="text-xs sm:text-sm text-night-slate/75 mt-1">
+            Every step traced, measured, and verified with GPS-registered cluster ledgers.
+          </p>
+</div>
+<!-- Geographic Corridor Container -->
+<div class="bg-silk-cream border border-card-border rounded-xl p-5 sm:p-6 shadow-sm mb-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+<!-- Left 7 cols: Map Interface with Visual Pinpoints -->
+<div class="lg:col-span-7 rounded-xl overflow-hidden bg-[#F6EFE2] border border-card-border h-[430px] relative flex flex-col justify-between shadow-inner select-none group">
+  <!-- SVG Cartographic Map Layer -->
+  <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
+    <svg class="w-full h-full object-cover" viewBox="0 0 760 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="topo-grid" width="36" height="36" patternUnits="userSpaceOnUse">
+          <path d="M 36 0 L 0 0 0 36" fill="none" stroke="#E2D9C8" stroke-width="0.6" stroke-opacity="0.75" stroke-dasharray="2 4"></path>
+        </pattern>
+        <linearGradient id="sea-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#E8E1D1" stop-opacity="0.6"></stop>
+          <stop offset="100%" stop-color="#D9CEB9" stop-opacity="0.8"></stop>
+        </linearGradient>
+        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="3" result="blur"></feGaussianBlur>
+          <feComposite in="SourceGraphic" in2="blur" operator="over"></feComposite>
+        </filter>
+      </defs>
+
+      <!-- Coordinate grid background -->
+      <rect width="100%" height="100%" fill="#FAF5EC"></rect>
+      <rect width="100%" height="100%" fill="url(#topo-grid)"></rect>
+
+      <!-- Water bodies / Bay of Bengal & Arabian Sea outlines -->
+      <path d="M 610 0 C 600 60, 580 130, 560 210 C 540 280, 500 370, 430 460 L 760 460 L 760 0 Z" fill="url(#sea-gradient)" opacity="0.65"></path>
+      <path d="M 0 320 C 50 350, 90 410, 110 460 L 0 460 Z" fill="url(#sea-gradient)" opacity="0.65"></path>
+
+      <!-- Tamil Nadu & Western Ghats Topo Contour Elevation Curves -->
+      <path d="M 140 10 C 130 90, 120 180, 150 250 C 180 320, 200 400, 240 450" stroke="#B8A78F" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.65"></path>
+      <path d="M 170 30 C 160 110, 150 190, 180 260 C 210 320, 230 380, 260 440" stroke="#C7B89F" stroke-width="1" opacity="0.7"></path>
+      <path d="M 190 70 C 180 140, 185 210, 215 270 C 240 330, 260 380, 280 430" stroke="#D5C7AF" stroke-width="0.8" opacity="0.8"></path>
+
+      <!-- Western Ghats Hill Shading Vector Region (Anaimalai & Nilgiris) -->
+      <path d="M 130 50 Q 155 70 170 120 T 195 190 T 215 270 T 240 370 T 255 450 L 190 450 Q 170 360 140 280 T 115 150 Z" fill="#244C5A" fill-opacity="0.05"></path>
+      <text x="115" y="110" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#8B7E6B" letter-spacing="0.15em" transform="rotate(65 115 110)">WESTERN GHATS RANGE</text>
+      <text x="480" y="130" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="600" fill="#8E8373" letter-spacing="0.2em" opacity="0.7">TAMIL NADU CORRIDOR</text>
+      <text x="570" y="320" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#6D7E8C" letter-spacing="0.18em" transform="rotate(-40 570 320)">BAY OF BENGAL</text>
+
+      <!-- Supply Chain Journey Transit Vectors -->
+      <!-- 1. Rajapalayam to Erode (Yarn Transport Route) -->
+      <path d="M 320 375 C 330 300, 390 230, 420 155" stroke="#364C7B" stroke-width="2.5" stroke-dasharray="6 4" stroke-linecap="round" opacity="0.85"></path>
+      
+      <!-- 2. Erode to Negamam (Dyed Skeins to Artisan Loom) -->
+      <path d="M 420 155 C 360 180, 305 210, 255 245" stroke="#15803D" stroke-width="2.5" stroke-dasharray="5 4" stroke-linecap="round"></path>
+
+      <!-- 3. Negamam to Pollachi GI Inspection Hub -->
+      <path d="M 255 245 L 210 275" stroke="#D97706" stroke-width="2.5" stroke-dasharray="4 3" stroke-linecap="round"></path>
+
+      <!-- 4. Pollachi to Customer Token Dispatch Hub -->
+      <path d="M 210 275 C 235 310, 310 330, 390 315" stroke="#364C7B" stroke-width="2" stroke-dasharray="3 3" stroke-linecap="round" opacity="0.75"></path>
+
+      <!-- Active Pulse Glow around Negamam -->
+      <circle cx="255" cy="245" r="26" fill="#15803D" fill-opacity="0.15"></circle>
+      <circle cx="255" cy="245" r="16" fill="#15803D" fill-opacity="0.2"></circle>
+    </svg>
+  </div>
+
+  <!-- Top HUD Bar: Regional Coordinates & Telemetry Controls -->
+  <div class="relative z-10 p-3 sm:p-4 flex items-center justify-between gap-2">
+    <div class="flex items-center gap-2 bg-[#FEF9EE]/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-card-border shadow-xs">
+      <span class="material-symbols-outlined text-indigo-blue text-sm">pin_drop</span>
+      <div class="flex flex-col sm:flex-row sm:items-center sm:gap-2 leading-tight">
+        <span class="text-[11px] font-bold text-night-slate tracking-tight">Tamil Nadu Handloom Corridor</span>
+        <span class="hidden sm:inline text-card-border">|</span>
+        <span class="text-[10px] font-mono text-night-slate/70">10°37′N 77°04′E</span>
+      </div>
+    </div>
+
+    <div class="flex items-center gap-1.5">
+      <span class="hidden md:inline-flex items-center gap-1 px-2.5 py-1 rounded bg-[#FEF9EE]/90 backdrop-blur-md border border-card-border text-[10px] font-mono text-night-slate/80">
+        <span class="w-1.5 h-1.5 rounded-full bg-weave-green animate-ping"></span> Live GPS Active
+      </span>
+      <span class="px-2.5 py-1 rounded bg-indigo-blue text-white text-[10px] font-bold uppercase tracking-wider shadow-xs">
+        5 Tracked Nodes
+      </span>
+    </div>
+  </div>
+
+  <!-- Interactive Nodes / Geo Map Checkpoints Placed on Coordinates -->
+  <div class="relative z-10 flex-1 w-full h-full pointer-events-none">
+    <!-- Node 1: Rajapalayam (Bottom Center-Left) -->
+    <div class="absolute left-[41%] top-[80%] -translate-x-1/2 -translate-y-1/2 pointer-events-auto flex items-center gap-1.5 group/pin">
+      <div class="w-6 h-6 rounded-full bg-[#FEF9EE] border-2 border-indigo-blue text-indigo-blue flex items-center justify-center text-[10px] font-bold shadow-md">
+        01
+      </div>
+      <div class="bg-[#FEF9EE]/95 backdrop-blur-sm border border-card-border px-2 py-0.5 rounded shadow-xs text-left">
+        <p class="text-[10px] font-bold text-night-slate leading-none">Rajapalayam</p>
+        <span class="text-[8px] font-mono text-night-slate/60">09°27′N · Ginned 80s</span>
+      </div>
+    </div>
+
+    <!-- Node 2: Erode Dyeworks (Upper Right) -->
+    <div class="absolute left-[54%] top-[33%] -translate-x-1/2 -translate-y-1/2 pointer-events-auto flex flex-col items-center group/pin">
+      <div class="w-6 h-6 rounded-full bg-[#FEF9EE] border-2 border-deep-teal text-deep-teal flex items-center justify-center text-[10px] font-bold shadow-md">
+        02
+      </div>
+      <div class="mt-1 bg-[#FEF9EE]/95 backdrop-blur-sm border border-card-border px-2 py-0.5 rounded shadow-xs text-center">
+        <p class="text-[10px] font-bold text-night-slate leading-none">Erode Clusters</p>
+        <span class="text-[8px] font-mono text-night-slate/60">11°20′N · Azo-Free Dye</span>
+      </div>
+    </div>
+
+    <!-- Node 3: Negamam Pit Loom #184 (Active Hub - Pulsing Beacon) -->
+    <div class="absolute left-[33%] top-[53%] -translate-x-1/2 -translate-y-1/2 pointer-events-auto flex flex-col items-center z-20 group/origin">
+      <div class="relative flex items-center justify-center">
+        <span class="absolute w-10 h-10 rounded-full bg-weave-green/20 animate-ping"></span>
+        <div class="w-8 h-8 rounded-full bg-indigo-blue text-white flex items-center justify-center text-xs font-bold shadow-lg ring-4 ring-weave-green/30 border-2 border-white">
+          <span class="material-symbols-outlined text-[15px]">home_pin</span>
+        </div>
+        <span class="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-weave-green border border-white"></span>
+      </div>
+      <div class="mt-1.5 bg-indigo-blue text-white px-2.5 py-1 rounded-md shadow-md text-center border border-white/20">
+        <div class="flex items-center justify-center gap-1">
+          <span class="w-1.5 h-1.5 rounded-full bg-weave-green animate-pulse"></span>
+          <p class="text-[10px] font-bold uppercase tracking-wider leading-none">Negamam Society #184</p>
+        </div>
+        <span class="text-[8px] font-mono text-white/80 block mt-0.5">Murthy's Pit Loom · 10°37′N</span>
+      </div>
+    </div>
+
+    <!-- Node 4: Pollachi GI Audit (Middle-Left) -->
+    <div class="absolute left-[26%] top-[60%] -translate-x-1/2 -translate-y-1/2 pointer-events-auto flex items-center gap-1.5 group/pin">
+      <div class="w-5 h-5 rounded-full bg-[#FEF9EE] border-2 border-zari-ochre text-zari-ochre flex items-center justify-center text-[9px] font-bold shadow-xs">
+        04
+      </div>
+      <div class="hidden sm:block bg-[#FEF9EE]/95 backdrop-blur-sm border border-card-border px-1.5 py-0.5 rounded shadow-xs text-left">
+        <p class="text-[9px] font-bold text-night-slate leading-none">Pollachi Co-op</p>
+        <span class="text-[8px] font-mono text-night-slate/60">GI-482 Registry</span>
+      </div>
+    </div>
+
+    <!-- Node 5: Customer QR Hub (Right Center) -->
+    <div class="absolute left-[52%] top-[68%] -translate-x-1/2 -translate-y-1/2 pointer-events-auto flex items-center gap-1.5 group/pin">
+      <div class="w-6 h-6 rounded-full bg-weave-green text-white flex items-center justify-center text-[10px] font-bold shadow-md">
+        05
+      </div>
+      <div class="bg-[#FEF9EE]/95 backdrop-blur-sm border border-card-border px-2 py-0.5 rounded shadow-xs text-left">
+        <p class="text-[10px] font-bold text-night-slate leading-none">Customer QR Pack</p>
+        <span class="text-[8px] text-weave-green font-semibold">Tamper-proof Seal</span>
+      </div>
+    </div>
+
+    <!-- Compass Rose Accent (Top-Right Cartographic Element) -->
+    <div class="absolute top-2 right-4 pointer-events-none opacity-80 flex flex-col items-center">
+      <div class="w-8 h-8 rounded-full border border-card-border/80 bg-[#FEF9EE]/80 backdrop-blur-xs flex items-center justify-center relative shadow-xs">
+        <span class="text-[8px] font-serif font-bold text-indigo-blue absolute -top-1">N</span>
+        <span class="text-[7px] font-serif text-night-slate/60 absolute -bottom-0.5">S</span>
+        <span class="text-[7px] font-serif text-night-slate/60 absolute -left-0.5">W</span>
+        <span class="text-[7px] font-serif text-night-slate/60 absolute -right-0.5">E</span>
+        <div class="w-3 h-3 rotate-45 border-t-2 border-l-2 border-indigo-blue"></div>
+      </div>
+      <span class="text-[8px] font-mono text-night-slate/50 mt-1">SCALE: 1:50,000</span>
+    </div>
+  </div>
+
+  <!-- Bottom Cartographic Footnote & Elevation Corridor Bar -->
+  <div class="relative z-10 p-3 bg-[#FEF9EE]/95 backdrop-blur-md border-t border-card-border flex flex-wrap items-center justify-between gap-2 text-xs">
+    <div class="flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-weave-green"></span>
+      <span class="font-bold text-night-slate text-[11px]">
+        Verified Origin: Negamam Weaver Society #184 (Pollachi Taluk, TN)
+      </span>
+      <span class="text-[10px] font-mono text-night-slate/60 bg-silk-cream px-1.5 py-0.2 border border-card-border rounded">PIN 642120</span>
+    </div>
+    <div class="flex items-center gap-3 text-[10px] font-medium text-night-slate/70">
+      <span class="hidden sm:inline flex items-center gap-1">
+        <span class="material-symbols-outlined text-[12px] text-indigo-blue">terrain</span>
+        Western Ghats Rain-shadow Handloom Corridor
+      </span>
+      <span class="text-indigo-blue font-bold tracking-wider uppercase text-[9px] bg-indigo-blue/10 px-2 py-0.5 rounded border border-indigo-blue/20">
+        GPS Audited
+      </span>
+    </div>
+  </div>
+</div>
+<!-- Right 5 cols: Punchy Coordinate Milestones -->
+<div class="lg:col-span-5 flex flex-col gap-2.5">
+<h3 class="font-serif text-lg font-bold text-night-slate mb-1">
+                Verified Provenance Chain
+              </h3>
+<div class="p-2.5 rounded-lg bg-canvas-base border border-card-border flex items-start gap-3">
+<span class="w-6 h-6 rounded-md bg-indigo-blue/15 text-indigo-blue font-bold text-xs flex items-center justify-center shrink-0">1</span>
+<div class="min-w-0">
+<div class="flex justify-between items-baseline">
+<span class="text-xs font-bold text-night-slate">Rajapalayam Farm &amp; Ginning</span>
+<span class="text-[10px] font-mono text-night-slate/50">09°27′N</span>
+</div>
+<p class="text-[11px] text-night-slate/70">Certified high-twist 80s cotton spun without chemical defoliants.</p>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-canvas-base border border-card-border flex items-start gap-3">
+<span class="w-6 h-6 rounded-md bg-deep-teal/15 text-deep-teal font-bold text-xs flex items-center justify-center shrink-0">2</span>
+<div class="min-w-0">
+<div class="flex justify-between items-baseline">
+<span class="text-xs font-bold text-night-slate">Erode Cluster Dyeworks</span>
+<span class="text-[10px] font-mono text-night-slate/50">11°20′N</span>
+</div>
+<p class="text-[11px] text-night-slate/70">Azo-free vat dyeing + organic kanji (rice gruel) sizing.</p>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-canvas-base border border-card-border flex items-start gap-3">
+<span class="w-6 h-6 rounded-md bg-indigo-blue/15 text-indigo-blue font-bold text-xs flex items-center justify-center shrink-0">3</span>
+<div class="min-w-0">
+<div class="flex justify-between items-baseline">
+<span class="text-xs font-bold text-night-slate">Murthy S.'s Pit Loom #184</span>
+<span class="text-[10px] font-mono text-night-slate/50">Negamam</span>
+</div>
+<p class="text-[11px] text-night-slate/70">32 hours of foot-treadle weaving and zari embossed butti crafting.</p>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-canvas-base border border-card-border flex items-start gap-3">
+<span class="w-6 h-6 rounded-md bg-zari-ochre/20 text-zari-ochre font-bold text-xs flex items-center justify-center shrink-0">4</span>
+<div class="min-w-0">
+<div class="flex justify-between items-baseline">
+<span class="text-xs font-bold text-night-slate">GI Registry Inspection</span>
+<span class="text-[10px] font-mono text-night-slate/50">Pollachi</span>
+</div>
+<p class="text-[11px] text-night-slate/70">Thread count verified at 80 EPI. Weighment logged at 540g.</p>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-canvas-base border border-card-border flex items-start gap-3">
+<span class="w-6 h-6 rounded-md bg-weave-green/20 text-weave-green font-bold text-xs flex items-center justify-center shrink-0">5</span>
+<div class="min-w-0">
+<div class="flex justify-between items-baseline">
+<span class="text-xs font-bold text-night-slate">Direct QR Token Sealed</span>
+<span class="text-[10px] font-bold text-weave-green">Customer Pack</span>
+</div>
+<p class="text-[11px] text-night-slate/70">Society sealed envelope with signed artisan parchment token.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 6-Stage Loom Flow Vignettes -->
+<div class="bg-silk-cream border border-card-border rounded-xl p-5 sm:p-6 shadow-sm"><div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6"><div><span class="text-[11px] uppercase font-bold tracking-wider text-deep-teal block">FABRIC LIFECYCLE &amp; SUSTAINABILITY AUDIT</span><h3 class="font-serif text-lg font-bold text-night-slate">Industrial Origins &amp; Eco-Beneficial Treatments</h3></div><span class="text-xs font-semibold text-night-slate/70">Certified Organic &amp; Non-Toxic Ledger · Co-op Society Registry</span></div><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4"><div class="flex flex-col items-center text-center group bg-canvas-base/60 border border-card-border/80 rounded-xl p-3 shadow-xs"><div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden p-1 bg-canvas-base border border-card-border shadow-xs group-hover:scale-105 transition-transform duration-300 mb-2"><img class="w-full h-full object-cover rounded-full" data-alt="Raw combed cotton yarn spools" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkndUa2AA8qjM2g4ZzRD4Ibgh4BA9p6BH0NtsfoUmMIvQ0mUNJnmoB-ThHO8vY_yW62abkaU-R6e5LyCPn0f3dNxuKjY7yGyRX0XOZFMSi4NZuH6PmXo8m_UNRONe1OsUF8MtMsIXV8imx7TebWq8RLm6uyDStfEChF1tOK-7A0CsDNe0Vw_8qFkUXVts7zeUq7hiyVNqERSLO6RxRattrB7rbhRzKdeCMKCHOASSOj7DcPqganHUbJg"></div><span class="text-[9px] font-bold uppercase tracking-wider text-deep-teal">ORIGIN: RAJAPALAYAM GINNING MILLS</span><h4 class="text-xs font-bold text-night-slate mt-0.5">Zero-Pesticide Raw Spools</h4><p class="text-[10px] text-night-slate/70 mt-1 leading-relaxed">100% GOTS-certified raw cotton spools; bio-mechanical ginning with zero synthetic defoliants to preserve tensile fiber elasticity.</p></div><div class="flex flex-col items-center text-center group bg-canvas-base/60 border border-card-border/80 rounded-xl p-3 shadow-xs"><div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden p-1 bg-canvas-base border border-card-border shadow-xs group-hover:scale-105 transition-transform duration-300 mb-2"><img class="w-full h-full object-cover rounded-full" data-alt="Street warp sizing under Tamil Nadu sun" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACANKi5S0S3NiEtmvS0CJOnv8xuuSQe2s0BCfHqQ05O-z87bj1luUT6bT8tx_Hmh-wva0fWKpUASrQDoCZ_qn58VImwCJgyx_T4rIE8v-BttfY1xI967YabS47Yu0QSvqkbNiMy_vtCDFpb7010CDhaLdjgi-XAX3ByRQBfXypiHcAmLWwgzIIGI3yhleQ1t6pfsKNjJLWrQ2_tTBnCP-aJR98Td3t1YTt8oj4icApya0h2ViRIGhjNg"></div><span class="text-[9px] font-bold uppercase tracking-wider text-deep-teal">FACILITY: ERODE ECO-DYEWORKS</span><h4 class="text-xs font-bold text-night-slate mt-0.5">Azo-Free Herbal Infusion</h4><p class="text-[10px] text-night-slate/70 mt-1 leading-relaxed">Infused with non-toxic azo-free vat dyes and natural plant mordants; closed-loop solar water heating with 98% water recovery.</p></div><div class="flex flex-col items-center text-center group bg-canvas-base/60 border border-card-border/80 rounded-xl p-3 shadow-xs"><div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden p-1 bg-canvas-base border border-card-border shadow-xs group-hover:scale-105 transition-transform duration-300 mb-2"><img class="w-full h-full object-cover rounded-full" data-alt="Threading individual threads into loom reed comb" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM2oHZHp64D0YTggVqoalo6PUAzYOnn9TIOZz14ndu4SqrJKe3S2v9YlkF2XCHK0eM4bDCynwm-4JIZKBL_JVtAhJnhs37ChV2XElmWvaH0PeZ-2Cx31UfcSLpao4qM14bByyQe9tWm3aMQ2DKZcxv0BzRYFahY42tyt8JxpMHw1mibRRRC4EDYt3zQEM4HO-2NOTzXlrlOkASb117BOSQ76DMCBWkrP5miEpE8SOzEsZFgf8Z4JzPpg"></div><span class="text-[9px] font-bold uppercase tracking-wider text-deep-teal">WORKSHOP: POLLACHI COMMUNITY YARD</span><h4 class="text-xs font-bold text-night-slate mt-0.5">Pure Rice Congee Sizing</h4><p class="text-[10px] text-night-slate/70 mt-1 leading-relaxed">Treated with traditional fermented rice gruel &amp; cold-pressed sesame oil; 100% biodegradable warp strengthening with zero chemical PVA/acrylates.</p></div><div class="flex flex-col items-center text-center group bg-canvas-base/60 border border-card-border/80 rounded-xl p-3 shadow-xs"><div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden p-1 bg-canvas-base border border-card-border shadow-xs group-hover:scale-105 transition-transform duration-300 mb-2"><img class="w-full h-full object-cover rounded-full" data-alt="Wooden pit loom dressing and tensioning" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyJcPTTJ_Gia52-Z_PPI6o_HD8aUTAxompbmb-RBbQcrHutju8cRTQ2H71Be1zHh_kFcBXWMI8u9dYrnkxvoFqUihLcr4WVAOb7H9mGs78qGwx_kRHgPpvyfdpvZEDdu3kkWcfkceM5w-VoH5WeYZVe19U_lpr1w1lqbXrSgyb0XcK8Q7TGhh27pCMZV6XwGGGmEgHlxcbmvzTZXGSrW9WVU6l2TafMT12B-AGdXQEZQxRtE_EQlGXyA"></div><span class="text-[9px] font-bold uppercase tracking-wider text-deep-teal">LOOM ATELIER: NEGAMAM PIT-LOOM #184</span><h4 class="text-xs font-bold text-night-slate mt-0.5">Manual Reed Alignment</h4><p class="text-[10px] text-night-slate/70 mt-1 leading-relaxed">4,800 ends hand-dressed through bamboo reed combs; zero electrical energy consumption, zero-carbon footprint artisanal tensioning.</p></div><div class="flex flex-col items-center text-center group bg-canvas-base/60 border border-indigo-blue/30 rounded-xl p-3 shadow-xs"><div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden p-1 bg-indigo-blue/10 border-2 border-indigo-blue shadow-md group-hover:scale-105 transition-transform duration-300 mb-2"><img class="w-full h-full object-cover rounded-full" data-alt="Murthy weaving on the pit loom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADimxvUBdWOQjEWtGJ8SDPQ59fRdc0RkAr0l0YAtArbPgS5o-T251i1Dbm8b9sBKSPCvYj-ZTv9XeTMNSBnWYEPZysV-uc2GZpsdqBarDWxxY0eAfiUwuItQM1Pl0wiaJJ0f_Y84xWhx28nhaJCnTxOxg_mlpjI3wdxAxm1PEfFfQQCp4VKjSkelaJyucaxYYs3KIeZ79KY2FkKWV9EvPZbKtOW3GqQsGvH9vJTuAP9QBCzdyYFt2MkQ"></div><span class="text-[9px] font-bold uppercase tracking-wider text-indigo-blue">WEAVER: MURTHY S. FLY-SHUTTLE</span><h4 class="text-xs font-bold text-night-slate mt-0.5">Physical Handloom Weave</h4><p class="text-[10px] text-night-slate/70 mt-1 leading-relaxed">32 hours of physical fly-shuttle foot-treadle interweaving; breathable open-pore cotton structure that naturally softens with age.</p></div><div class="flex flex-col items-center text-center group bg-canvas-base/60 border border-card-border/80 rounded-xl p-3 shadow-xs"><div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden p-1 bg-canvas-base border border-card-border shadow-xs group-hover:scale-105 transition-transform duration-300 mb-2"><img class="w-full h-full object-cover rounded-full" data-alt="GI stamped finished saree" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxmcjzFOG-gLU8Tw8wb2vv-BbiLMME_1NLqNz_y2AFOBJKupuZzhWdxYx0lVzTevixikfazVgVnJb19p61hCRzNgeP2cNiamZosklpuYetegC6bA_MIDFi2y7_yxLnKAt7zAQcKqeUhL78snsGUcv4sAqNrCIJP1TfHdOlEAq5qpQ-nBpxqO6yB3O8iAM0sDSZpemrXKcODtZ858dNlnVJNmTVae_Ffqr52Uc4w9WUKoACKG3HzCNboA"></div><span class="text-[9px] font-bold uppercase tracking-wider text-deep-teal">AUDIT: CO-OP LEDGER &amp; GI LAB</span><h4 class="text-xs font-bold text-night-slate mt-0.5">Steam Sanitized &amp; QR Sealed</h4><p class="text-[10px] text-night-slate/70 mt-1 leading-relaxed">Purified with natural eucalyptus herbal steam; 0% formaldehyde or harsh finishing resins. Hand-stamped GI seal &amp; tamper-proof Neelam QR.</p></div></div><div class="mt-5 p-3 rounded-lg bg-weave-green/10 border border-weave-green/30 flex items-center justify-center gap-2 text-center"><span class="material-symbols-outlined text-weave-green text-base shrink-0">eco</span><p class="text-xs font-semibold text-night-slate"><span class="text-weave-green font-bold">100% Biodegradable &amp; Skin-Safe:</span> Every treatment avoids industrial microplastics, petroleum derivatives, and heavy metals—ensuring an hypoallergenic, earth-to-earth lifecycle.</p></div></div>
+</section>
+<!-- 4. MASTER ARTISAN SPOTLIGHT: MURTHY S. -->
+<section class="w-full mb-12" id="artisan-section">
+<div class="bg-silk-cream border border-card-border rounded-xl p-5 sm:p-8 shadow-sm relative overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Artisan Photo Card -->
+<div class="lg:col-span-4 flex flex-col items-center">
+<div class="relative w-full max-w-xs aspect-[3/4] rounded-xl overflow-hidden shadow-md bg-canvas-base border border-card-border">
+<img class="w-full h-full object-cover" data-alt="Dignified documentary portrait of Master Weaver Murthy S." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCePNClboHXToB_eWuyH1AEuI7rcDUaLnQRncsvkzTRVqS-sdVNW8Lnvx1pHDQHlHmencDsOzXmgz1rUTc0VZ8jnY_NZ7cUtJqLbD6odCy-_MaiKKdO85Xh9VzAhdqlvW1rZRQSmrNd2q25VXCaTEoT-4McDDGZBra5gq0nqdNcZZe8vh-LzlWzUEDEE6eH7HtQ5e8jhJXHgGr13B2rUV3LyZ1lzM5qyRBrtC41zTW8Y2AZ3dh1wRNT5Sc7-yf8_g7FL3K3WN9aQy1WH00">
+<div class="absolute bottom-3 left-3 right-3 bg-canvas-base/95 backdrop-blur-md px-3.5 py-2.5 rounded-lg border border-card-border flex items-center justify-between shadow-xs">
+<div>
+<span class="font-serif text-sm font-bold text-night-slate block">Murthy S.</span>
+<span class="text-[11px] font-medium text-deep-teal">3rd Generation Master Weaver</span>
+</div>
+<div class="flex items-center gap-1 bg-zari-ochre/15 px-2 py-0.5 rounded text-zari-ochre text-xs font-bold">
+<span class="material-symbols-outlined text-[14px]">star</span>
+<span class="">4.9</span>
+</div>
+</div>
+</div>
+<div class="mt-3 flex items-center gap-1.5 text-xs text-night-slate/70 font-semibold">
+<span class="material-symbols-outlined text-sm text-weave-green">check_circle</span>
+                Negamam Society Member Since 2006 · 18 Yrs Experience
+              </div>
+</div>
+<!-- Artisan Bio & Metrics (Neelam Style Guide Alignment) -->
+<div class="lg:col-span-8 flex flex-col">
+<div class="mb-4">
+<span class="text-[11px] uppercase font-bold tracking-widest text-deep-teal block mb-1">
+                  Master Artisan Profile · Society Ledger #184
+                </span>
+<h2 class="font-serif text-3xl font-bold text-night-slate">
+                  Murthy S.
+                </h2>
+<p class="text-xs font-medium text-night-slate/70 mt-0.5">
+                  Negamam Weavers Co-operative Society · Coimbatore District, Tamil Nadu
+                </p>
+</div>
+<!-- Structured Dossier Box -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 bg-canvas-base border border-card-border rounded-lg p-4 mb-4 text-xs">
+<div>
+<span class="text-[10px] uppercase font-bold text-night-slate/50 block">Artisan Classification</span>
+<span class="font-bold text-night-slate">Traditional Handloom Negamam Cotton Weaver</span>
+</div>
+<div>
+<span class="text-[10px] uppercase font-bold text-night-slate/50 block">Seniority &amp; Experience</span>
+<span class="font-bold text-night-slate">18 Years of Pit Loom Mastery</span>
+</div>
+<div>
+<span class="text-[10px] uppercase font-bold text-night-slate/50 block">Signature Specialty</span>
+<span class="font-bold text-night-slate">Thread-Embossed Butti &amp; Zari Borders</span>
+</div>
+<div>
+<span class="text-[10px] uppercase font-bold text-night-slate/50 block">Loom Architecture</span>
+<span class="font-bold text-night-slate">Underground Wooden Pit Loom (Fly Shuttle)</span>
+</div>
+</div>
+<!-- Bio Narrative -->
+<div class="mb-5">
+<h4 class="text-[11px] uppercase font-bold text-deep-teal tracking-wider mb-1.5">Artisan Heritage Note</h4>
+<p class="text-sm text-night-slate/85 leading-relaxed font-sans">
+                  Murthy S. is a skilled Master Weaver from Negamam Society, Coimbatore, Tamil Nadu, with 18 years of experience in traditional handloom weaving. He specializes in Negamam cotton sarees, known for their lightweight cotton fabric, traditional craftsmanship, and distinctive thread-embossed designs. His work includes green, wine, and peach thread-embossed sarees, reflecting the rich weaving heritage of the Negamam handloom community.
+                </p>
+</div>
+<!-- 3 Impact Counters -->
+<div class="grid grid-cols-3 gap-3">
+<div class="p-3 rounded-lg bg-canvas-base border border-card-border text-center">
+<span class="font-serif text-2xl font-bold text-indigo-blue block">85%</span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-night-slate/60">Direct Fair Wage</span>
+</div>
+<div class="p-3 rounded-lg bg-canvas-base border border-card-border text-center">
+<span class="font-serif text-2xl font-bold text-indigo-blue block">320+</span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-night-slate/60">Heirloom Sarees</span>
+</div>
+<div class="p-3 rounded-lg bg-canvas-base border border-card-border text-center">
+<span class="font-serif text-2xl font-bold text-indigo-blue block">0%</span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-night-slate/60">Power Loom Blend</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. ARTISAN CATALOG: OTHER SAREES BY MURTHY S. -->
+<section class="w-full mb-12" id="other-creations">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between mb-6 gap-2">
+<div>
+<span class="text-[11px] uppercase font-bold tracking-widest text-deep-teal block mb-1">
+              Direct from Murthy's Loom
+            </span>
+<h2 class="font-serif text-2xl sm:text-3xl text-night-slate font-bold">
+              More Handcrafted Creations by Murthy S.
+            </h2>
+<p class="text-xs sm:text-sm text-night-slate/75 mt-0.5">
+              Limited monthly production. Each piece carries its own unique QR tag and GI certificate.
+            </p>
+</div>
+<span class="text-xs font-semibold text-night-slate/60">
+            Archive Selection (4 Verified Pieces)
+          </span>
+</div>
+<!-- 4-Product Grid Matching Image Reference -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+<!-- Card 1 -->
+<div class="group bg-silk-cream border border-card-border rounded-xl p-3 flex flex-col shadow-sm hover:shadow-md hover:border-indigo-blue/40 transition-all">
+<div class="aspect-[4/3] rounded-lg overflow-hidden bg-canvas-base relative mb-3">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Negamam Cotton Pista Green Saree" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4lYJyahz_YPI09DU08trY4hsOIPS6m0w5Z3FfRg0eIrlKwbGBI9ZEZPaNRYXwKu129LEqwpLMcFY7RPoMDwZqA3Xb5QBVhFrlZxCU4FB9Flx0rQgZtHiYQr5YH8SG98FOgLizQBUIaOrT2bocREWF3f8dsaLgUs4ibZT1UZ9TUBlflanJLc0B9i3g-dNhJIS7BVIEIm_9oJyauW2y6SpfJXcQYRRKDVBTtyUh46RjRS8jaJcnmWvWnQ">
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-canvas-base/90 text-night-slate text-[10px] font-bold uppercase tracking-wider border border-card-border">
+                Lightweight 80s
+              </span>
+</div>
+<div class="flex-1 flex flex-col">
+<span class="text-[10px] uppercase font-bold text-deep-teal">Murthy S. Loom #184</span>
+<h3 class="font-serif text-sm font-bold text-night-slate line-clamp-1 mt-0.5">Negamam Cotton Pista Green</h3>
+<p class="text-xs text-night-slate/70 line-clamp-2 mt-1">Subtle embossed leaf motifs with slate grey contrast borders.</p>
+<div class="mt-3 pt-2.5 border-t border-card-border/60 flex items-center justify-between">
+<span class="font-serif text-base font-bold text-indigo-blue">₹ 1,860</span>
+<button class="px-3 py-1.5 rounded-lg bg-indigo-blue text-white text-xs font-bold uppercase tracking-wider hover:bg-indigo-dark transition-colors" type="button">
+                  Reserve
+                </button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-silk-cream border border-card-border rounded-xl p-3 flex flex-col shadow-sm hover:shadow-md hover:border-indigo-blue/40 transition-all">
+<div class="aspect-[4/3] rounded-lg overflow-hidden bg-canvas-base relative mb-3">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Negamam Cotton Wine and Green Saree" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvrB-Eah2H19OR8LpSU2KPzG0E5yC9v3UhpNLMME9-XAm9QaP3tY9wzBTzRpxZupe_3qZ5Z_irMYqjVoZLJUj5lVg4R48bIj66IXiK61dZeXzni6oTNI1xgs_2tUhDFX6Py5RvWGTBysK2Tt3zbSVLycHgdfDp9hqQ1WNf5BI6vlVV44jH-dZvcSYNka6a1t7L8Md_W_SwKy3oW5UqyZET6yFaKvNn4_um5yunb3Cg1_q5-S9J1DRx9g">
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-canvas-base/90 text-night-slate text-[10px] font-bold uppercase tracking-wider border border-card-border">
+                Festive Loom
+              </span>
+</div>
+<div class="flex-1 flex flex-col">
+<span class="text-[10px] uppercase font-bold text-deep-teal">Murthy S. Loom #184</span>
+<h3 class="font-serif text-sm font-bold text-night-slate line-clamp-1 mt-0.5">Negamam Cotton Wine &amp; Green</h3>
+<p class="text-xs text-night-slate/70 line-clamp-2 mt-1">Dual emerald border with gold zari feather butti accents.</p>
+<div class="mt-3 pt-2.5 border-t border-card-border/60 flex items-center justify-between">
+<span class="font-serif text-base font-bold text-indigo-blue">₹ 2,150</span>
+<button class="px-3 py-1.5 rounded-lg bg-indigo-blue text-white text-xs font-bold uppercase tracking-wider hover:bg-indigo-dark transition-colors" type="button">
+                  Reserve
+                </button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-silk-cream border border-card-border rounded-xl p-3 flex flex-col shadow-sm hover:shadow-md hover:border-indigo-blue/40 transition-all">
+<div class="aspect-[4/3] rounded-lg overflow-hidden bg-canvas-base relative mb-3">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Pista Green Thread Embossed Variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQh_XedIhM5uotpqfrVaXe5fOXegnvEHYRREYhHOUfPEs_D53ZeA974kEv22XK8quAQ2OGRfjMR_Nw41lpbeGaLbJHQRHBc2hNEjzlbJ6tvytbjEdCcRC50NSCvze9o8UIJev6tXJNTLyQdZzyZHF56elUdVYNVifmVXYzS5TFu7YGk35u4GUUg93MqGFEO-C3u-rD3--58Ier7hEmIsFGuF_nbEqmG5M-Pq7mTWHUVbPIhTMh9qK3vA">
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-canvas-base/90 text-night-slate text-[10px] font-bold uppercase tracking-wider border border-card-border">
+                Summer Weave
+              </span>
+</div>
+<div class="flex-1 flex flex-col">
+<span class="text-[10px] uppercase font-bold text-deep-teal">Murthy S. Loom #184</span>
+<h3 class="font-serif text-sm font-bold text-night-slate line-clamp-1 mt-0.5">Pista Green Thread Embossed</h3>
+<p class="text-xs text-night-slate/70 line-clamp-2 mt-1">Lightweight breathability with micro selvedge finish.</p>
+<div class="mt-3 pt-2.5 border-t border-card-border/60 flex items-center justify-between">
+<span class="font-serif text-base font-bold text-indigo-blue">₹ 2,020</span>
+<button class="px-3 py-1.5 rounded-lg bg-indigo-blue text-white text-xs font-bold uppercase tracking-wider hover:bg-indigo-dark transition-colors" type="button">
+                  Reserve
+                </button>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group bg-silk-cream border border-card-border rounded-xl p-3 flex flex-col shadow-sm hover:shadow-md hover:border-indigo-blue/40 transition-all">
+<div class="aspect-[4/3] rounded-lg overflow-hidden bg-canvas-base relative mb-3">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Peach Thread Embossed Saree" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDt0X3ORXCTxiASVaW1sckpA3K_AsWn_Yj9OjK0ZHpphpXrlCMB7XTF2qWR5pcYlPA30m2wZC98TYyeyY38aqa2xJ3wfRhGO4svh-rjzp6rpY3GSeAOelL4C68ceQV7pydHWy6-s58ns6Z9gIdGttZD9os05qOMvtZl8WnKakmbPtfAwL6VmNcUL2PIzxie2elgMbTSaIEro8jNS6iVAdlnCj7rx8_wxnRzPdMk1mhc07Aq2Zc9Nf_xA">
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-canvas-base/90 text-night-slate text-[10px] font-bold uppercase tracking-wider border border-card-border">
+                Copper Buttas
+              </span>
+</div>
+<div class="flex-1 flex flex-col">
+<span class="text-[10px] uppercase font-bold text-deep-teal">Murthy S. Loom #184</span>
+<h3 class="font-serif text-sm font-bold text-night-slate line-clamp-1 mt-0.5">Negamam Cotton Peach</h3>
+<p class="text-xs text-night-slate/70 line-clamp-2 mt-1">Warm copper rust border with matching running blouse.</p>
+<div class="mt-3 pt-2.5 border-t border-card-border/60 flex items-center justify-between">
+<span class="font-serif text-base font-bold text-indigo-blue">₹ 2,020</span>
+<button class="px-3 py-1.5 rounded-lg bg-indigo-blue text-white text-xs font-bold uppercase tracking-wider hover:bg-indigo-dark transition-colors" type="button">
+                  Reserve
+                </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. HIGH-CONTRAST LOOM VIDEO: VIEW FROM THE PIT LOOM -->
+<section class="w-full mb-12" id="loom-video-section">
+<div class="bg-night-slate text-canvas-base rounded-xl p-5 sm:p-8 shadow-md relative overflow-hidden">
+<div class="mb-6 flex flex-col md:flex-row md:items-end justify-between gap-3">
+<div>
+<span class="text-[11px] uppercase font-bold tracking-widest text-zari-ochre block mb-1">
+                Atelier Documentary · Live Loom Recording
+              </span>
+<h2 class="font-serif text-2xl sm:text-3xl font-bold text-white">
+                Watch Murthy S. at the Loom: The Rhythms of Negamam
+              </h2>
+<p class="text-xs sm:text-sm text-canvas-base/75 mt-1 max-w-2xl">
+                Experience the 32 hours of hand, foot, and shuttle synchronization that formed Saree #NGM1024.
+              </p>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded bg-white/10 text-white text-[11px] font-mono">Binaural Shuttle Audio 4K</span>
+</div>
+</div>
+<!-- Video Player Display -->
+<div class="relative w-full aspect-video sm:aspect-[21/9] rounded-lg overflow-hidden bg-black/80 shadow-inner group" id="loom-video-wrapper">
+  <!-- Hidden File Input for Video Upload -->
+  <input type="file" id="video-upload-input" accept="video/mp4,video/webm,video/ogg,video/quicktime" class="hidden" onchange="if(this.files && this.files[0]) { const file = this.files[0]; const vid = document.getElementById('loom-video-player'); const poster = document.getElementById('loom-video-poster'); const overlay = document.getElementById('loom-video-overlay'); const playBtn = document.getElementById('loom-play-btn'); const badge = document.getElementById('loom-video-badge'); vid.src = URL.createObjectURL(file); vid.classList.remove('hidden'); poster.classList.add('hidden'); overlay.classList.add('pointer-events-none'); playBtn.classList.add('hidden'); if(badge) badge.innerText = 'Custom Video Loaded: ' + file.name; vid.play(); }">
+
+  <!-- Video Element (Hidden until loaded or user starts playback) -->
+  <video id="loom-video-player" controls="" class="w-full h-full object-cover hidden" preload="metadata"></video>
+
+  <!-- Default Video Poster / Thumbnail -->
+  <img id="loom-video-poster" class="w-full h-full object-cover opacity-80 group-hover:opacity-90 transition-opacity duration-300" data-alt="Artisan Murthy S. seated at pit loom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmrfUDFw1OPQcxYjHQlu05MVAzuQWeCv_ZkeHlZv3VFb60zhwxXOWG7egWr-r29FMxHRhrvQKPZ5zzM4lU38jQiJ4PX3oFtkml48dgG_zOL_0rsH1m-HQ2AgHojJneadjjDMF_4jZV9YJvXDN-uZNsoEqP5p2JZsAytiWwAYWZzauY6rkzt5dNd52k-pS3OAdAsbWggXiMTFLOxtsz1VeBlgNRPLp1xeUKvdrJ-FJ4h1u6iaDvYqbrnQ">
+
+  <!-- Overlay & Controls -->
+  <div id="loom-video-overlay" class="absolute inset-0 flex flex-col justify-between p-4 sm:p-6 bg-gradient-to-t from-black/80 via-transparent to-black/30 transition-opacity duration-300">
+    <div class="flex items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="px-2.5 py-1 rounded bg-indigo-blue text-white text-[11px] font-bold uppercase tracking-wider shadow-sm" id="loom-video-badge">
+          Field Master Cut
+        </span>
+        <span class="text-xs text-white/80 font-mono hidden sm:inline">Recorded in Negamam Village</span>
+      </div>
+      <!-- Upload / Replace Video Button -->
+      <button type="button" onclick="document.getElementById('video-upload-input').click()" class="pointer-events-auto inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/20 text-white text-xs font-bold tracking-wide uppercase transition-all shadow-sm">
+        <span class="material-symbols-outlined text-[16px] text-zari-ochre">cloud_upload</span>
+        <span class="">Upload / Change Video</span>
+      </button>
+    </div>
+
+    <!-- Center Play Icon -->
+    <div class="self-center" id="loom-play-btn">
+      <button type="button" onclick="const input = document.getElementById('video-upload-input'); const vid = document.getElementById('loom-video-player'); if(vid.src) { vid.classList.remove('hidden'); document.getElementById('loom-video-poster').classList.add('hidden'); document.getElementById('loom-video-overlay').classList.add('pointer-events-none'); this.classList.add('hidden'); vid.play(); } else { input.click(); }" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-canvas-base text-night-slate flex items-center justify-center shadow-xl hover:scale-105 hover:bg-white transition-all">
+        <span class="material-symbols-outlined text-4xl sm:text-5xl ml-1 text-indigo-blue">play_arrow</span>
+      </button>
+    </div>
+
+    <!-- Progress Scrub Bar / Upload Prompt Footer -->
+    <div class="space-y-1.5">
+      <div class="w-full h-1.5 bg-white/20 rounded-full overflow-hidden">
+        <div class="h-full bg-zari-ochre rounded-full w-2/5"></div>
+      </div>
+      <div class="flex items-center justify-between text-[11px] font-mono text-white/80">
+        <span class="">01:42 / 04:18</span>
+        <span class="hidden sm:inline font-sans">Scene: Zari Floral Inlay Insertion (or upload your recording)</span>
+        <span class="">1080p HD</span>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Video Chapters & Quote -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-6 pt-6 border-t border-white/10 items-center">
+<div class="lg:col-span-7 bg-white/5 p-4 rounded-lg border border-white/10">
+<span class="text-[10px] uppercase font-bold tracking-wider text-zari-ochre block mb-1">Artisan Voice Note</span>
+<blockquote class="font-quote italic text-sm sm:text-base text-canvas-base leading-relaxed">
+                “The sound of the fly-shuttle is like a heartbeat. When I weave this copper border, each thread must be adjusted with equal tension from my feet on the treadles. One wrong rhythm changes the entire drape of the saree.”
+              </blockquote>
+<span class="text-xs font-mono text-canvas-base/60 block mt-2">— Murthy S., Weaver Society #184</span>
+</div>
+<div class="lg:col-span-5 grid grid-cols-2 gap-2 text-xs">
+<div class="p-2.5 rounded bg-white/5 border border-white/10 flex items-center justify-between">
+<span class="text-canvas-base font-medium">00:15 Setting the Warp</span>
+<span class="material-symbols-outlined text-sm text-zari-ochre">schedule</span>
+</div>
+<div class="p-2.5 rounded bg-white/5 border border-white/10 flex items-center justify-between">
+<span class="text-canvas-base font-medium">01:20 Paisley Butta</span>
+<span class="material-symbols-outlined text-sm text-zari-ochre">schedule</span>
+</div>
+<div class="p-2.5 rounded bg-white/5 border border-white/10 flex items-center justify-between">
+<span class="text-canvas-base font-medium">02:45 Border Density</span>
+<span class="material-symbols-outlined text-sm text-zari-ochre">schedule</span>
+</div>
+<div class="p-2.5 rounded bg-white/5 border border-white/10 flex items-center justify-between">
+<span class="text-canvas-base font-medium">03:50 Message to Buyer</span>
+<span class="material-symbols-outlined text-sm text-zari-ochre">schedule</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. STICKY WEAVER GRATITUDE DOCK -->
+<div class="sticky bottom-4 z-40 w-full">
+<div class="bg-silk-cream/95 backdrop-blur-md rounded-xl p-3.5 sm:p-4 border border-card-border shadow-lg flex flex-col sm:flex-row items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-indigo-blue/10 border border-indigo-blue/20 flex items-center justify-center shrink-0 text-indigo-blue">
+<span class="material-symbols-outlined text-xl">handshake</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-night-slate">Direct Connection with Murthy S.</span>
+<span class="px-2 py-0.5 rounded bg-weave-green/10 text-weave-green text-[10px] font-bold uppercase tracking-wider">
+                  Saree #NGM1024
+                </span>
+</div>
+<p class="text-[11px] text-night-slate/60 hidden md:block">Send a direct message or note of appreciation straight to his society register.</p>
+</div>
+</div>
+<div class="flex items-center gap-2 w-full sm:w-auto">
+<input class="flex-1 sm:w-72 px-3 py-1.5 text-xs bg-canvas-base border border-card-border rounded-lg text-night-slate placeholder:text-night-slate/40 focus:outline-none focus:ring-1 focus:ring-indigo-blue" placeholder="Write a note of gratitude to Murthy..." type="text">
+<button class="px-4 py-2 rounded-lg bg-indigo-blue hover:bg-indigo-dark text-white text-xs font-bold uppercase tracking-wider transition-colors shrink-0 flex items-center gap-1 shadow-sm" onclick="this.innerText='Note Delivered!'; this.classList.remove('bg-indigo-blue'); this.classList.add('bg-weave-green')" type="button">
+<span class="">Send Note</span>
+<span class="material-symbols-outlined text-[15px]">send</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- FOOTER: NEELAM PROVENANCE INTEGRITY PLEDGE -->
+<footer class="w-full bg-silk-cream border-t border-card-border py-12">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-8">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-8">
+<!-- Left Brand & Seal -->
+<div class="md:col-span-5 space-y-3">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-md bg-canvas-base border border-card-border flex items-center justify-center p-1">
+<img alt="Neelam Kolam" class="w-full h-full object-contain mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvazyXK1GfH4QpPwqhtOLDL7IiPLsYDSYISY75b1jXrZ9SMrdySnTLQPvFpbRJh8JTvwayY9CbWbBaFQTeqYbMgmXr37LO1EQ3g_dizFqlrEIk9VAogfE2tLbDsOTqERCXIEigZMdU53FrQGpeAzFH3fcMh8_DxBttYWG--yZIOrr7mzpyxCXqliP11SKX-H1gf8-nBONkS8PMNiGFg9gsClK_retkoBgh5HuOSaZdYNXsnVVY1l4Ay-vvY9-VbM6X0IA">
+</div>
+<img alt="neelam" class="h-5 w-auto object-contain mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCesjV4I3NNcpCRUlo89CoWHZNv85WbHxjG1rUJORvl27zSvXEdl4Ggco9mdaLemYFg1PxYiiHw7O4d1HCn_-Dv2x_Mv9VaFJHXfhbVmaeCxrMQbSpArAGyYbhm8necfE8gsQspo99IoHA6Wk6CdNfLFfTvH9cWk2_kt_gOFhIBd2luaNJBAeGSnVVD8K4knSM7AQR-wxleQWwR7QmEMl9lLew5mZs4hA_QQ_AGFsufm71cyftDWW5QfSBHQeLRgarwGmQ">
+</div>
+<p class="text-xs text-night-slate/75 leading-relaxed max-w-sm">
+            Neelam is an authentic handloom provenance platform. We connect conscious patrons directly to Indian master pit loom weavers, removing middlemen and guaranteeing GI origin integrity.
+          </p>
+<div class="flex items-center gap-2 text-xs font-bold text-night-slate">
+<span class="material-symbols-outlined text-sm text-zari-madder">verified</span>
+            GI Registry Act 1999 Certificate GI-482
+          </div>
+</div>
+<!-- Middle Ethical Wage Pledge -->
+<div class="md:col-span-4 space-y-2">
+<h4 class="text-xs uppercase font-bold tracking-widest text-deep-teal">Ethical Remittance Pledge</h4>
+<p class="text-xs text-night-slate/75 leading-relaxed">
+            Every transaction is verified on the cooperative society ledger. 85% of the saree valuation is paid directly to the artisan's account, ensuring generational livelihoods and zero exploitation.
+          </p>
+</div>
+<!-- Right Co-Op Origin Registry -->
+<div class="md:col-span-3 space-y-2">
+<h4 class="text-xs uppercase font-bold tracking-widest text-deep-teal">Registered Co-Op Cluster</h4>
+<address class="not-italic text-xs text-night-slate/70 leading-relaxed font-mono">
+            Negamam Weavers Co-operative Society<br>
+            Society Reg. #K-1428<br>
+            Pollachi Taluk, Coimbatore 642120<br>
+            Tamil Nadu, India
+          </address>
+</div>
+</div>
+<!-- Bottom Credits & Verification Badges -->
+<div class="pt-6 border-t border-card-border flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-night-slate/60">
+<p class="">© neelam · Handloom Provenance &amp; Artisan Origin Archive. All rights reserved.</p>
+<div class="flex items-center gap-4">
+<span class="text-deep-teal font-semibold">100% Organic Negamam Cotton</span>
+<span class="">•</span>
+<span class="text-deep-teal font-semibold">Certified Azo-Free Dye</span>
+<span class="">•</span>
+<span class="text-deep-teal font-semibold">Master Pit Loom Registered</span>
+</div>
+</div>
+</div>
+</footer>
+
+
+</body></html>

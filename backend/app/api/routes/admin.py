@@ -17,6 +17,7 @@ from app.models.gi import GITable
 from app.api.routes.provenance import (
     provenance_events,
     verify_provenance,
+    create_provenance_event,
 )
 
 
@@ -154,20 +155,6 @@ def admin_dashboard(
     current_admin: str = Depends(get_current_admin),
     db: Session = Depends(get_db),
 ):
-    """
-    Main admin dashboard data.
-
-    Provides:
-    - Summary statistics
-    - NEELAM verification statistics
-    - Showcase products
-    - Available dashboard modules
-    """
-
-    # -----------------------------
-    # Summary counts
-    # -----------------------------
-
     total_products = (
         db.query(ProductTable).count()
     )
@@ -179,10 +166,6 @@ def admin_dashboard(
     total_gi_records = (
         db.query(GITable).count()
     )
-
-    # -----------------------------
-    # NEELAM verification counts
-    # -----------------------------
 
     total_neelam_records = len(
         provenance_events
@@ -198,10 +181,6 @@ def admin_dashboard(
             neelam_verified += 1
         else:
             neelam_pending += 1
-
-    # -----------------------------
-    # Product cards / showcase list
-    # -----------------------------
 
     products = (
         db.query(ProductTable)
@@ -272,11 +251,6 @@ def admin_products(
     current_admin: str = Depends(get_current_admin),
     db: Session = Depends(get_db),
 ):
-    """
-    Return all products for the admin portal.
-    Requires admin authentication.
-    """
-
     products = (
         db.query(ProductTable)
         .order_by(ProductTable.product_id)
@@ -299,4 +273,287 @@ def admin_products(
             }
             for product in products
         ],
+    }
+
+
+# ============================================================
+# NEELAM TAG MANAGEMENT
+# ============================================================
+
+@router.get("/neelam")
+def admin_neelam_records(
+    current_admin: str = Depends(get_current_admin),
+    db: Session = Depends(get_db),
+):
+    """
+    Return NEELAM tag records for owner/admin review.
+    """
+
+    products = (
+        db.query(ProductTable)
+        .order_by(ProductTable.product_id)
+        .all()
+    )
+
+    records = []
+
+    for product in products:
+
+        artisan = (
+            db.query(ArtisanTable)
+            .filter(
+                ArtisanTable.artisan_id
+                == product.artisan_id
+            )
+            .first()
+        )
+
+        provenance_result = verify_provenance(
+            product.product_id
+        )
+
+        product_events = provenance_events.get(
+            product.product_id,
+            []
+        )
+
+        tag_approved = any(
+            event["event_type"] == "TAG_APPROVED"
+            for event in product_events
+        )
+
+        if tag_approved:
+            tag_status = "Approved"
+        else:
+            tag_status = "Pending Review"
+
+        records.append({
+            "product_id": product.product_id,
+            "neelam_id": (
+                f"NEELAM-{product.product_id}"
+            ),
+
+            "product": product.name,
+
+            "artisan_id": product.artisan_id,
+
+            "artisan": (
+                artisan.name
+                if artisan
+                else "Not available"
+            ),
+
+            "craft": product.craft,
+
+            "region": product.region,
+
+            "material": product.material,
+
+            "gi_status": product.gi_status,
+
+            "provenance_valid": (
+                provenance_result.get("valid", False)
+            ),
+
+            "events_verified": (
+                provenance_result.get(
+                    "events_verified",
+                    0
+                )
+            ),
+
+            "tag_status": tag_status,
+        })
+
+    return {
+        "admin": current_admin,
+        "total_records": len(records),
+        "records": records,
+    }
+
+
+@router.get("/neelam/{product_id}")
+def admin_neelam_detail(
+    product_id: str,
+    current_admin: str = Depends(get_current_admin),
+    db: Session = Depends(get_db),
+):
+    """
+    Return detailed NEELAM review information
+    for one product.
+    """
+
+    product = (
+        db.query(ProductTable)
+        .filter(
+            ProductTable.product_id == product_id
+        )
+        .first()
+    )
+
+    if not product:
+        raise HTTPException(
+            status_code=404,
+            detail="Product not found",
+        )
+
+    artisan = (
+        db.query(ArtisanTable)
+        .filter(
+            ArtisanTable.artisan_id
+            == product.artisan_id
+        )
+        .first()
+    )
+
+    provenance_result = verify_provenance(
+        product_id
+    )
+
+    events = provenance_events.get(
+        product_id,
+        []
+    )
+
+    tag_approved = any(
+        event["event_type"] == "TAG_APPROVED"
+        for event in events
+    )
+
+    return {
+        "product": {
+            "product_id": product.product_id,
+            "name": product.name,
+            "craft": product.craft,
+            "material": product.material,
+            "region": product.region,
+            "price": product.price,
+        },
+
+        "artisan": {
+            "artisan_id": (
+                artisan.artisan_id
+                if artisan
+                else None
+            ),
+            "name": (
+                artisan.name
+                if artisan
+                else "Not available"
+            ),
+            "language": (
+                artisan.language
+                if artisan
+                else "Not available"
+            ),
+            "region": (
+                artisan.region
+                if artisan
+                else "Not available"
+            ),
+        },
+
+        "gi": {
+            "status": product.gi_status,
+        },
+
+        "neelam": {
+            "neelam_id": (
+                f"NEELAM-{product.product_id}"
+            ),
+
+            "tag_status": (
+                "Approved"
+                if tag_approved
+                else "Pending Review"
+            ),
+
+            "provenance_valid": (
+                provenance_result.get(
+                    "valid",
+                    False
+                )
+            ),
+
+            "events_verified": (
+                provenance_result.get(
+                    "events_verified",
+                    0
+                )
+            ),
+        },
+
+        "provenance_history": events,
+    }
+
+
+@router.post("/neelam/{product_id}/approve")
+def approve_neelam_tag(
+    product_id: str,
+    current_admin: str = Depends(get_current_admin),
+    db: Session = Depends(get_db),
+):
+    """
+    Approve a NEELAM tag for a product.
+
+    Approval is recorded as a provenance event.
+    """
+
+    product = (
+        db.query(ProductTable)
+        .filter(
+            ProductTable.product_id == product_id
+        )
+        .first()
+    )
+
+    if not product:
+        raise HTTPException(
+            status_code=404,
+            detail="Product not found",
+        )
+
+    existing_events = provenance_events.get(
+        product_id,
+        []
+    )
+
+    already_approved = any(
+        event["event_type"] == "TAG_APPROVED"
+        for event in existing_events
+    )
+
+    if already_approved:
+        return {
+            "message": "NEELAM tag is already approved",
+            "product_id": product_id,
+            "neelam_id": (
+                f"NEELAM-{product_id}"
+            ),
+            "tag_status": "Approved",
+        }
+
+    event = create_provenance_event(
+        product_id=product_id,
+        event_type="TAG_APPROVED",
+        event_data={
+            "approved_by": current_admin,
+            "product_id": product_id,
+            "artisan_id": product.artisan_id,
+            "neelam_id": (
+                f"NEELAM-{product_id}"
+            ),
+            "approval_type": "Owner/Admin approval",
+        },
+    )
+
+    return {
+        "message": "NEELAM tag approved successfully",
+        "product_id": product_id,
+        "neelam_id": (
+            f"NEELAM-{product_id}"
+        ),
+        "tag_status": "Approved",
+        "approved_by": current_admin,
+        "provenance_event": event,
     }

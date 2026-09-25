@@ -1,4 +1,8 @@
+from pathlib import Path
+
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
 from app.api.routes.product import router as product_router
@@ -29,10 +33,26 @@ from app.models.payment import PaymentTable
 from app.models.admin import AdminTable
 
 
-# Create all database tables
+# --------------------------------------------------
+# Paths
+# --------------------------------------------------
+
+BACKEND_DIR = Path(__file__).resolve().parent.parent
+PUBLIC_DIR = BACKEND_DIR / "public"
+PUBLIC_HTML = PUBLIC_DIR / "code.html"
+
+
+# --------------------------------------------------
+# Create database tables
+# --------------------------------------------------
+
 Base.metadata.create_all(bind=engine)
 
-# Initialize demo NEELAM provenance records
+
+# --------------------------------------------------
+# Initialize demo NEELAM records
+# --------------------------------------------------
+
 initialize_demo_provenance()
 
 
@@ -46,7 +66,28 @@ app = FastAPI(
 )
 
 
-# Register API routes
+# --------------------------------------------------
+# CORS - allows frontend to communicate with backend
+# --------------------------------------------------
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
+# --------------------------------------------------
+# API Routes
+# --------------------------------------------------
+
 app.include_router(product_router)
 app.include_router(artisan_router)
 app.include_router(gi_router)
@@ -61,13 +102,32 @@ app.include_router(demo_router)
 app.include_router(admin_router)
 
 
-# Serve processed AI images
+# --------------------------------------------------
+# Public NEELAM HTML page
+# --------------------------------------------------
+
+@app.get("/public/neelam")
+def public_neelam_page():
+    return FileResponse(
+        PUBLIC_HTML,
+        media_type="text/html",
+    )
+
+
+# --------------------------------------------------
+# Processed image files
+# --------------------------------------------------
+
 app.mount(
     "/processed-images",
     StaticFiles(directory="processed_images"),
     name="processed-images",
 )
 
+
+# --------------------------------------------------
+# Basic endpoints
+# --------------------------------------------------
 
 @app.get("/")
 def root():
